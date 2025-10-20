@@ -1,6 +1,9 @@
-# Smart Contract Wrapper
+# Smart Contract Wrapper (CyberChain)
 
-Typescript wrapper for smart contract interaction (Adapted for post-quantum version of HyperLedger Besu, for CyberChain).
+[![Test CI](https://github.com/bisite/cyberchain-smart-contract-wrapper/actions/workflows/test.yml/badge.svg)](https://github.com/bisite/cyberchain-smart-contract-wrapper/actions/workflows/test.yml) 
+[![npm version](https://badge.fury.io/js/%40cyberchain%2Fsmart-contract-wrapper.svg)](https://badge.fury.io/js/%40cyberchain%2Fsmart-contract-wrapper)
+
+Typescript wrapper for smart contract interaction (Adapted for post-quantum version of HyperLedger Besu, for the [CyberChain](https://cyberchain.bisite.es/) project).
 
 This is a library to interact with Ethereum EVM using the JSON-RPC API. It allows both calling pure and view methods and also sending transactions.
 
@@ -9,7 +12,7 @@ This is a library to interact with Ethereum EVM using the JSON-RPC API. It allow
 If you are using a npm managed project use:
 
 ```
-npm install @cyberchain/smart-contract-wrapper
+npm install --save @cyberchain/smart-contract-wrapper
 ```
 
 ## Usage
