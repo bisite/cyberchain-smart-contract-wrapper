@@ -1,6 +1,6 @@
 {
   "name": "@cyberchain/smart-contract-wrapper",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Typescript wrapper for smart contract interaction. Fork made for the CyberChain project.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -57,7 +57,7 @@
   "license": "MIT",
   "dependencies": {
     "@asanrom/ethers-abi": "1.0.0",
-    "@cyberchain/tx": "0.2.3",
+    "@cyberchain/tx": "0.2.5",
     "@ethereumjs/common": "4.4.0",
     "@ethereumjs/util": "9.1.0",
     "@noble/post-quantum": "0.4.0",
