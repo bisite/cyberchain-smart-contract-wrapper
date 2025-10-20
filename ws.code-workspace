@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"dist/**": true,
+			"docs/**": true,
+			"dist.webpack/**": true,
+			"node_modules/**": true,
+			"codegen/**": true
+		},
+	}
+}

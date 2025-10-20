@@ -1,0 +1,18 @@
+# .npmignore file
+
+# Ignore downloaded dependencies
+
+node_modules
+
+# Ignore temp files
+
+temp
+
+package-lock.json
+npm-debug.log
+core
+
+# Tests
+
+tests
+besu-test-node

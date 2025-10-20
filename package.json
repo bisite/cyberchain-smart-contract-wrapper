@@ -1,0 +1,68 @@
+{
+  "name": "@cyberchain/smart-contract-wrapper",
+  "version": "2.0.2",
+  "description": "Typescript wrapper for smart contract interaction. Fork made for the CyberChain project.",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "homepage": "https://github.com/bisite/cyberchain-smart-contract-wrapper",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bisite/cyberchain-smart-contract-wrapper"
+  },
+  "scripts": {
+    "prebuild": "npm run lint",
+    "compile": "tsc --pretty --declaration",
+    "build": "rimraf dist && npm run compile",
+    "docs:build": "typedoc --options typedoc.cjs",
+    "lint": "eslint --fix './src/**/*.ts'",
+    "test:lint": "eslint './src/**/*.ts'",
+    "test:mocha": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha --exit -b -r ts-node/register './tests/**/*.ts'",
+    "test": "npm run test:lint && npm run test:mocha",
+    "cli": "node dist/cli"
+  },
+  "files": [
+    "dist/"
+  ],
+  "author": "BISITE",
+  "contributors": [
+    {
+      "name": "Agustin San Roman",
+      "email": "agustinsanromanguzman@gmail.com",
+      "url": "https://github.com/AgustinSRG"
+    }
+  ],
+  "engines": {
+    "node": ">= 20.0.0"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "devDependencies": {
+    "@types/chai": "4.3.11",
+    "@types/mocha": "10.0.6",
+    "@types/node": "20.10.5",
+    "@types/randombytes": "2.0.3",
+    "@types/ws": "8.5.10",
+    "@typescript-eslint/eslint-plugin": "6.16.0",
+    "@typescript-eslint/parser": "6.16.0",
+    "chai": "4.3.10",
+    "eslint": "8.56.0",
+    "mocha": "11.1.0",
+    "rimraf": "5.0.5",
+    "ts-node": "10.9.2",
+    "typedoc": "0.28.14",
+    "typedoc-plugin-markdown": "4.9.0",
+    "typescript": "5.3.3"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@asanrom/ethers-abi": "1.0.0",
+    "@cyberchain/tx": "0.2.3",
+    "@ethereumjs/common": "4.4.0",
+    "@ethereumjs/util": "9.1.0",
+    "@noble/post-quantum": "0.4.0",
+    "ethereum-cryptography": "2.2.1",
+    "randombytes": "2.1.0",
+    "ws": "8.18.0"
+  }
+}
