@@ -10,7 +10,8 @@
 			"docs/**": true,
 			"dist.webpack/**": true,
 			"node_modules/**": true,
-			"codegen/**": true
+			"codegen/**": true,
+			"test-node/data/**": true
 		},
 	}
 }
