@@ -15,4 +15,4 @@ core
 # Tests
 
 tests
-besu-test-node
+test-node
