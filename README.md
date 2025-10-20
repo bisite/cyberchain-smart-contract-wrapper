@@ -1,6 +1,6 @@
 # Smart Contract Wrapper
 
-Typescript wrapper for smart contract interaction (Adapted for post-quantum version of Hyperledger Besu, for CyberChain).
+Typescript wrapper for smart contract interaction (Adapted for post-quantum version of HyperLedger Besu, for CyberChain).
 
 This is a library to interact with Ethereum EVM using the JSON-RPC API. It allows both calling pure and view methods and also sending transactions.
 
@@ -20,10 +20,12 @@ Using this class you can create a class for a smart contract, implementing the m
 
 ## Documentation
 
- - [Library documentation (Auto-generated)](https://agustinsrg.github.io/smart-contract-wrapper/docs)
+ - [Library documentation (Auto-generated)](./docs/README.md)
 
 ## Contract wrapper generator
 
 For automatic generation of a smart contract wrappers, use the following utility:
 
  - [Smart contract wrapper generator](https://agustinsrg.github.io/smart-contract-wrapper/codegen)
+
+Remember to replace `@asanrom/smart-contract-wrapper` with `@cyberchain/smart-contract-wrapper` when generating the wrappers.
