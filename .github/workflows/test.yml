@@ -1,0 +1,34 @@
+name: Test CI
+
+on:
+  push:
+    branches: [ "master", "main", "develop" ]
+  pull_request:
+    branches: [ "master", "main", "develop" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v5
+
+    - name: Install NodeJS
+      uses: actions/setup-node@v6
+      with:
+        node-version: 20
+    
+    - name: Set up CyberChain test node
+      working-directory: ./test-node
+      run: docker compose up -d
+
+    - name: Install dependencies
+      run: npm install --no-audit
+
+    - name: Build library
+      run: npm run build
+
+    - name: Run tests
+      run: npm test
