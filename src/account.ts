@@ -107,12 +107,12 @@ export interface WalletGenerationOptions {
  * @returns The sign keys
  */
 export function generateMixedWallet(options: WalletGenerationOptions): { signKeyECDSA: SignKeyECDSA, signKeyMLSA: SignKeyMLDSA } {
-    const privateKeyECDSA = options.seed ? keccak256(Buffer.from(options.seed, "utf8")) : randombytes(32);
+    const privateKeyECDSA = options.seed ? keccak256(Buffer.from(options.seed + "/EC-DSA", "utf8")) : randombytes(32);
 
     let privateKeyMLDSA: Uint8Array;
     let publicKeyMLDSA: Uint8Array;
 
-    const mlDSASeed = options.seed ? keccak256(Buffer.from(options.seed, "utf8")) : randombytes(32);
+    const mlDSASeed = options.seed ? keccak256(Buffer.from(options.seed + "/ML-DSA", "utf8")) : randombytes(32);
 
     switch (options.mlDsaLevel) {
         case 65:
